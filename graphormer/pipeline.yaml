@@ -1,0 +1,3 @@
+tasks:
+    - source: graphormer+linear_to_be_executed.ipynb
+      product: out/graphormer+linear_to_be_executed.ipynb
