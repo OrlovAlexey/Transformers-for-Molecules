@@ -1,0 +1,24 @@
+batch_size: 16
+warm_up: 10
+epochs: 100
+load_model: pretrained_gcn
+save_every_n_epochs: 5
+fp16_precision: false
+init_lr: 0.0005
+weight_decay: 1e-5
+gpu: cuda:7
+model_type: gcn
+model:
+  num_layer: 5
+  emb_dim: 300
+  feat_dim: 512
+  drop_ratio: 0
+  pool: mean
+aug: node
+dataset:
+  num_workers: 12
+  valid_size: 0.1
+  data_path: data/pubchem-10m-clean.txt
+loss:
+  temperature: 0.1
+  use_cosine_similarity: true

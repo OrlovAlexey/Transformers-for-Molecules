@@ -1,0 +1,1 @@
+{"loss graphormer/valid": 87.21319453947005, "_timestamp": 1718630283.5524056, "_runtime": 4.450103521347046, "_step": 199, "loss molclr/valid": 87.21319453947005, "_wandb": {"runtime": 38}}
