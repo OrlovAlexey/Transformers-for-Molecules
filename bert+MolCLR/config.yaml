@@ -1,16 +1,16 @@
-batch_size: 32                          # batch size
+batch_size: 16                          # batch size
 warm_up: 10                             # warm-up epochs
 epochs: 100                             # total number of epochs
 
-load_model: None                        # resume training
+load_model: pretrained_gcn              # resume training
 save_every_n_epochs: 5                  # automatic model saving frequecy
 
 fp16_precision: False                   # float precision 16 (i.e. True/False)
 init_lr: 0.0005                         # initial learning rate for Adam
 weight_decay: 1e-5                      # weight decay for Adam
-gpu: cuda:3                             # training GPU 
+gpu: cuda:5                             # training GPU 
 
-model_type: gcn                         # GNN backbone (i.e., gin/gcn)
+model_type: gin                         # GNN backbone (i.e., gin/gcn)
 model: 
   num_layer: 5                          # number of graph conv layers
   emb_dim: 300                          # embedding dimension in graph conv layers
@@ -32,3 +32,6 @@ loss_params:
   alpha: 1.0                            # weight for bert loss
   beta: 1.0                             # weight for graph_model loss
   gamma: 1.0                            # weight for bimodal loss
+
+pretrained_roberta_name: molberto_ecfp0_2M
+
