@@ -57,3 +57,5 @@ class Shifter:
             for j in range(len(substructure)):
                 for i in range(len(substructure[j])):
                     substructure[j][i] += 6 # FOR SPECIAL TOKENS
+                    
+        return susbstr_merged
