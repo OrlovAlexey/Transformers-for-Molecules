@@ -2,7 +2,7 @@ START_TOKEN = 0
 PADDING_TOKEN = 1
 END_TOKEN = 2
 SPLITTER_TOKEN = 3
-DOLLAR_TOKEN = 4
+DOLLAR_TOKEN = 5
 
 def append_everything_and_add_special_tokens(descriptors_of_substructures, max_length, truncation=True):
     mask = [1] * max_length
