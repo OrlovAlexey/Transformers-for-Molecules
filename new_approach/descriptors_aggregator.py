@@ -205,7 +205,7 @@ class Aggregator:
             result= []
             mol = Chem.MolFromSmiles(smiles)
 
-            result.append(list(count_atoms_in_molecule(mol).values()))        # 16; max < 50
+            result.append(list(count_atoms_in_molecule(mol).values()))        # 12; max < 50
             result.append([count_atoms(mol)])                                 # max < 50
             result.append(list(count_bond_types(mol).values()))               # 4; max < 300
             result.append([count_all_bonds(mol)])                             # max < 300
@@ -214,6 +214,16 @@ class Aggregator:
             result.append([categorize_uff_energy(calculate_uff_energy(mol))]) # max < 8
             result.append([count_ring_atoms(mol)])                            # max < 50
             result.append([count_complete_rings(mol)])                        # max < 10
+
+            # [[30, 62, 19, 16, 13, 22, 19, 12, 10, 13, 23, 2],
+            # [30],
+            # [37, 17, 12, 36],
+            # [91],
+            # [4495],
+            # [4],
+            # [7],
+            # [30],
+            # [11]]
 
             return result
         else:
