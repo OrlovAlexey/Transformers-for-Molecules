@@ -12,15 +12,15 @@ class Shifter:
             "count_complete_rings": 22
         }
         m = {
-            "count_atoms_in_molecule": 50,
+            "count_atoms_in_molecule": 100,
             "count_atoms": 50,
             "count_bond_types": 300,
             "count_all_bonds": 300,
-            "calculate_wiener_index": 2000,
+            "calculate_wiener_index": 5000,
             "categorize_logp_detailed": 8,
             "categorize_uff_energy": 9,
             "count_ring_atoms": 50,
-            "count_complete_rings": 10
+            "count_complete_rings": 20
         }
         for substructure in susbstr_merged:
             if substructure == '$':
