@@ -1,3 +1,5 @@
+from tqdm import tqdm
+
 START_TOKEN = 0
 PADDING_TOKEN = 1
 END_TOKEN = 2
@@ -38,7 +40,7 @@ def append_everything_and_add_special_tokens(descriptors_of_substructures, max_l
 def tokenize(array_of_descriptors_of_substructures, max_length):
     all_appended_array = []
     mask_array = []
-    for descriptors_of_substructures in array_of_descriptors_of_substructures:
+    for descriptors_of_substructures in tqdm(array_of_descriptors_of_substructures):
         all_appended, mask = append_everything_and_add_special_tokens(descriptors_of_substructures, max_length)
         all_appended_array.append(all_appended)
         mask_array.append(mask)
